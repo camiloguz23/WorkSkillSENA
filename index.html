@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="view/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecera"> 
+        <h1>WORKSKILL</h1>
+        <h3>Concesionario</h3>
+    </header>
+    <div class="cuerpo">
+        <div class="usuarios">
+            <div class="lista">
+                <section>
+                    <p><b>Usuarios en cola</b></p>
+                </section>
+                <div id="texto">
+                    
+                </div>
+            </div>
+            <div class="compra">
+                <button>Confirmar</button>
+                <button id="create">Ingresar usuario</button>
+            </div>
+        </div>
+        
+        <div class="galeria">
+            <div class="cuerpo-galeria">
+                <section id="elementos">
+                    <p class="BMW active" >BMW</p>
+                    <p class="AUDI">AUDI</p>
+                    <p class="VOLKSWAGEN">VOLKSWAGEN</p>
+                </section>
+                <div  id="contenedor">
+                    <img src="view/img/bmw1.jpg" alt="BMW" class="img-size">
+                    <img src="view/img/bmw3.jpg" alt="BMW" class="img-size">
+                    <img src="view/img/bmw3.jpg" alt="BMW" class="img-size">
+                    <img src="view/img/bmw4.jpg" alt="BMW" class="img-size">
+                    <img src="view/img/bmw5.jpg" alt="BMW" class="img-size">
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <p><b>WORKSKILL</b></p>
+    </footer>
+
+    <!-- ^Elementos flotantes  -->
+
+    <div class="crear_user" id="cont-create">
+        <form action="" autocomplete="off" id="formuser">
+            <label for="">Nombre del usuario</label><br>
+            <input type="text" name="" id="nom-user"><br>
+            <button id="enviar">Enviar</button>
+            <button id="exit">Cerrar</button>
+        </form>
+        <div action="" id="mensaje" class="mensaje"> 
+            <h3>Usuario ingresado</h3>
+        </div>
+    </div>
+
+    <script src="view/javascript/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorPrincipal : hsla(10, 100%, 0%, 0.8);
+    --colorSegundario : hsla(0, 5%, 50%, 1);
+    --colorLetra : white
+    
+}
+
+.cabecera{
+    background-color: var(--colorPrincipal);
+    color: var(--colorLetra);
+    padding: 5px;
+    height: 10vh;
+}
+
+
+
+.cuerpo{
+    
+    padding-bottom:10px ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;   
+}
+
+footer{
+background-color: black;   
+color: var(--colorLetra);
+padding:7px;
+}
+
+
+
+.usuarios, .cuerpo-galeria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.usuarios > div, .cuerpo-galeria, .cuerpo-galeria > section,.cuerpo-galeria > div{
+    margin-top: 20px;
+}
+
+.lista{
+    width: 70%;
+    border: solid 1px black; 
+}
+
+.lista:hover {
+    box-shadow: 2px 2px 15px 2px  black;
+}
+
+.lista section, .cuerpo-galeria section{
+    background-color: var(--colorSegundario);
+    padding: 3px;
+    color: white;
+    font-size: 25px;
+}
+
+.lista p {
+    padding: 6px;
+
+}
+
+/* .galeria{
+    border: solid 2px rgb(0, 17, 255);
+    
+   
+} */
+
+.compra button {
+    padding: 5px 10px;
+    margin-left: 20px;
+    background-color: var(--colorLetra);
+    border: solid 2px black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.compra button:hover {
+    cursor: pointer;
+    background-color: var(--colorPrincipal);
+    color: var(--colorLetra);
+
+}
+
+.img-size{
+    width: 220px;
+    margin-left: 5px;
+}
+
+.cuerpo-galeria section{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+
+}
+ 
+.cuerpo-galeria section p {
+    padding: 3px 20px;
+    border-radius: 10px;
+}
+
+
+.active{
+    background-color: var(--colorPrincipal);
+    color: var(--colorLetra);
+}
+#contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: solid 2px var(--colorPrincipal);
+    
+    width: 100%;
+
+
+}
+
+/* ^ crear usuario */
+
+.crear_user{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(10, 100%, 0%, 0.8);
+    transition: 1s;
+    visibility: hidden;
+}
+
+.mensaje {
+    text-align: center;
+    background-color: hsla(0, 5%, 90%, 0.7);
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 15px;
+    animation-name: movimiento;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    display: none;
+}
+
+@keyframes movimiento {
+    15% { transform: rotate(25deg);}
+    30% {transform: rotate(15deg)}
+    60% {transform: rotate(-25deg)}
+    80% {transform: rotate(-15deg)}
+    100% {transform: rotate(0deg)}
+}
+
+.crear_user form{
+    text-align: center;
+    background-color: hsla(0, 5%, 90%, 0.7);
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 15px;
+  
+}
+
+.crear_user input{
+    text-align: center;
+    padding: 5px;
+    font-size: 22px;
+    margin: 20px 0px;
+    border-top: transparent;
+    border-bottom: solid black;
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
+}
+
+.crear_user input:focus {
+    border-top: transparent;
+    border-bottom: solid rgb(7, 7, 153);
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
+    outline: none;
+}
+
+.crear_user button {
+    font-size: 21px;
+    padding: 3px 9px;
+    border-radius: 10px;
+    
+}
+
+.crear_user button:hover {
+    cursor: pointer;
+}
