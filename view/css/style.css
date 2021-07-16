@@ -94,7 +94,8 @@ padding:7px;
 
 .img-size{
     width: 220px;
-    margin-left: 5px;
+    margin: 7px;
+    
 }
 
 .cuerpo-galeria section{
@@ -122,6 +123,23 @@ padding:7px;
     width: 100%;
 
 
+}
+
+.seleccionado {
+    background-color: yellow;
+}
+
+#texto p::before {
+    content: "\025cf ";
+    color: hsla(0, 100%, 50%, 1);
+    font-size: 20px;
+    
+    
+    
+}
+
+#elementos p:hover{
+    cursor: pointer;
 }
 
 /* ^ crear usuario */

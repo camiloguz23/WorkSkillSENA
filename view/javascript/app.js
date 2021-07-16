@@ -2,7 +2,7 @@ const elemento = document.getElementById("elementos")
 const contendor = document.getElementById("contenedor")
 const bmw = document.querySelector(".BMW")
 const audi = document.querySelector(".AUDI")
-const auto = document.querySelector(".AUTOS")
+const auto = document.querySelector(".VOLKSWAGEN")
 const btn_create = document.getElementById("create")
 const cont_create = document.getElementById("cont-create")
 const enviar = document.getElementById("enviar")
@@ -11,6 +11,7 @@ const lista = document.getElementById("texto")
 const formuser = document.getElementById("formuser")
 const cerrar = document.getElementById("exit") 
 const mensaje = document.getElementById("mensaje")
+const confirmacion = document.getElementById("ok")
 
 let usuario = []
 
@@ -87,4 +88,42 @@ enviar.addEventListener("click", (e) => {
 cerrar.addEventListener("click", (e) => {
     e.preventDefault()
     cont_create.style.visibility= "hidden"
+})
+
+lista.addEventListener("click", (e) => {
+    const user = e.target.textContent
+    
+
+    if( user == usuario[0]){
+        console.log("si es correcto")
+        lista.innerHTML=`<p class="seleccionado">${user}</p>`
+        btn_create.style.display = "none"
+        contendor.addEventListener("click", (e) => {
+            
+            let opacidad = e.target
+            opacidad.style.opacity = 0.5
+        })
+    }else {
+        alert("no es correcto segun el orden de la cola ")
+    }
+})
+
+confirmacion.addEventListener("click", (e) => {
+    e.preventDefault()
+    usuario.shift()
+    console.log(usuario)
+    lista.innerHTML=``
+    usuario.forEach(elem => {
+        const p = document.createElement("p")
+        p.textContent = elem
+        lista.appendChild(p)
+    })
+    const imagenes = document.querySelectorAll(".img-size")
+    imagenes.forEach(css => {
+        css.style.opacity=1
+        
+    })
+    btn_create.style.display = "inline-block"
+    
+
 })
